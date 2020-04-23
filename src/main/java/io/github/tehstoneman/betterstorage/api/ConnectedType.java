@@ -16,7 +16,7 @@ public enum ConnectedType implements IStringSerializable
 	private final String				name;
 	private final int					opposite;
 
-	private ConnectedType( String name, int oppositeIn )
+	private ConnectedType(String name, int oppositeIn )
 	{
 		this.name = name;
 		opposite = oppositeIn;

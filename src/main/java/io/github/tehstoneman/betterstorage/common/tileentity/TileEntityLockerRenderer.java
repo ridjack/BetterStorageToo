@@ -1,4 +1,4 @@
-package io.github.tehstoneman.betterstorage.client.renderer.tileentity;
+package io.github.tehstoneman.betterstorage.common.tileentity;
 
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.vertex.IVertexBuilder;
@@ -113,9 +113,9 @@ public class TileEntityLockerRenderer extends TileEntityRenderer< TileEntityLock
 	 */
 //	private void renderItem( TileEntityReinforcedLocker locker, float partialTicks, MatrixStack matrixStack, IRenderTypeBuffer buffer,
 //			int packedLight, BlockState state )
-//	{
+	{
 //		final ItemStack itemstack = locker.getLock();
-//
+
 //		if( !itemstack.isEmpty() )
 //		{
 //			if( itemRenderer == null )
@@ -138,5 +138,5 @@ public class TileEntityLockerRenderer extends TileEntityRenderer< TileEntityLock
 //			itemRenderer.renderItem( itemstack, ItemCameraTransforms.TransformType.FIXED, packedLight, OverlayTexture.DEFAULT_LIGHT, matrixStack,
 //					buffer );
 //		}
-//	}
+	}
 }

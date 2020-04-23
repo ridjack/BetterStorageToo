@@ -17,8 +17,8 @@ public class ModNetwork
 
 		int index = 1;
 
-		channel.messageBuilder( UpdateCrateMessage.class, index++ ).decoder( UpdateCrateMessage::decode ).encoder( UpdateCrateMessage::encode )
-				.consumer( UpdateCrateMessage::handle ).add();
+//		channel.messageBuilder( UpdateCrateMessage.class, index++ ).decoder( UpdateCrateMessage::decode ).encoder( UpdateCrateMessage::encode )
+//				.consumer( UpdateCrateMessage::handle ).add();
 
 		return channel;
 	}

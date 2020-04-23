@@ -9,7 +9,7 @@ public class BlockItemBetterStorage extends BlockItem
 {
 	public BlockItemBetterStorage( Block blockIn )
 	{
-		this( blockIn, new Item.Properties() );
+		this( blockIn, new Properties() );
 	}
 
 	public BlockItemBetterStorage( Block blockIn, Properties properties )

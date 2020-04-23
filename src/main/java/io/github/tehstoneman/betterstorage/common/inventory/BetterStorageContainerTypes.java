@@ -16,42 +16,42 @@ public final class BetterStorageContainerTypes
 			ForgeRegistries.CONTAINERS, ModInfo.MOD_ID );
 
 	//@formatter:off
-	public static RegistryObject< ContainerType< ContainerCardboardBox > >		CARDBOARD_BOX		= REGISTERY.register( "cardboard_box",
-			() -> IForgeContainerType.create( ( windowID, inv, data ) ->
-										{
-											final BlockPos pos = data.readBlockPos();
-											return new ContainerCardboardBox( windowID, inv, BetterStorage.PROXY.getClientWorld(), pos );
-										} ) );
-	public static RegistryObject< ContainerType< ContainerCrate > >				CRATE				= REGISTERY.register( "crate",
-			() -> IForgeContainerType.create( ( windowID, inv, data ) ->
-										{
-											final BlockPos pos = data.readBlockPos();
-											return new ContainerCrate( windowID, inv, BetterStorage.PROXY.getClientWorld(), pos );
-										} ) );
-	public static RegistryObject< ContainerType< ContainerKeyring > >			KEYRING				= REGISTERY.register( "keyring",
-			() -> IForgeContainerType.create( ( windowID, inv, data ) ->
-										{
-											final ItemStack keyring = data.readItemStack();
-											final int protectedIndex = data.readInt();
-											return new ContainerKeyring( windowID, inv, keyring, protectedIndex );
-										} ) );
+//	public static RegistryObject< ContainerType< ContainerCardboardBox > >		CARDBOARD_BOX		= REGISTERY.register( "cardboard_box",
+//			() -> IForgeContainerType.create( ( windowID, inv, data ) ->
+//										{
+//											final BlockPos pos = data.readBlockPos();
+//											return new ContainerCardboardBox( windowID, inv, BetterStorage.PROXY.getClientWorld(), pos );
+//										} ) );
+//	public static RegistryObject< ContainerType< ContainerCrate > >				CRATE				= REGISTERY.register( "crate",
+//			() -> IForgeContainerType.create( ( windowID, inv, data ) ->
+//										{
+//											final BlockPos pos = data.readBlockPos();
+//											return new ContainerCrate( windowID, inv, BetterStorage.PROXY.getClientWorld(), pos );
+//										} ) );
+//	public static RegistryObject< ContainerType< ContainerKeyring > >			KEYRING				= REGISTERY.register( "keyring",
+//			() -> IForgeContainerType.create( ( windowID, inv, data ) ->
+//										{
+//											final ItemStack keyring = data.readItemStack();
+//											final int protectedIndex = data.readInt();
+//											return new ContainerKeyring( windowID, inv, keyring, protectedIndex );
+////										} ) );
 	public static RegistryObject< ContainerType< ContainerLocker > >			LOCKER				= REGISTERY.register( "locker",
 			() -> IForgeContainerType.create( ( windowID, inv, data ) ->
 										{
 											final BlockPos pos = data.readBlockPos();
 											return new ContainerLocker( windowID, inv, BetterStorage.PROXY.getClientWorld(), pos );
 										} ) );
-	public static RegistryObject< ContainerType< ContainerReinforcedChest > >	REINFORCED_CHEST	= REGISTERY.register( "reinforced_chest",
-			() -> IForgeContainerType.create( ( windowID, inv, data ) ->
-										{
-											final BlockPos pos = data.readBlockPos();
-											return new ContainerReinforcedChest( windowID, inv, BetterStorage.PROXY.getClientWorld(), pos );
-										} ) );
-	public static RegistryObject< ContainerType< ContainerReinforcedLocker > >	REINFORCED_LOCKER	= REGISTERY.register( "reinforced_locker",
-			() -> IForgeContainerType.create( ( windowID, inv, data ) ->
-										{
-											final BlockPos pos = data.readBlockPos();
-											return new ContainerReinforcedLocker( windowID, inv, BetterStorage.PROXY.getClientWorld(), pos );
-										} ) );
+//	public static RegistryObject< ContainerType< ContainerReinforcedChest > >	REINFORCED_CHEST	= REGISTERY.register( "reinforced_chest",
+//			() -> IForgeContainerType.create( ( windowID, inv, data ) ->
+//										{
+//											final BlockPos pos = data.readBlockPos();
+//											return new ContainerReinforcedChest( windowID, inv, BetterStorage.PROXY.getClientWorld(), pos );
+//										} ) );
+//	public static RegistryObject< ContainerType< ContainerReinforcedLocker > >	REINFORCED_LOCKER	= REGISTERY.register( "reinforced_locker",
+//			() -> IForgeContainerType.create( ( windowID, inv, data ) ->
+//										{
+//											final BlockPos pos = data.readBlockPos();
+//											return new ContainerReinforcedLocker( windowID, inv, BetterStorage.PROXY.getClientWorld(), pos );
+//										} ) );
 	//@formatter:on
 }
