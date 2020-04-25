@@ -1,3 +1,9 @@
+/**
+ * Comments in this file existed before I got my hands on this.
+ * I'm leaving everything here for now, until I know if the
+ * comments were important. - R
+ */
+
 package io.github.tehstoneman.betterstorage.util;
 
 import net.minecraft.block.Block;

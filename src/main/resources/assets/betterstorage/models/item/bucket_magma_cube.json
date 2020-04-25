@@ -1,8 +1,0 @@
-{
-	"parent": "item/generated",
-	"textures":
-	{
-		"layer0": "betterstorage:items/bucket_empty",
-		"layer1": "betterstorage:items/bucket_magma_cube"
-	}
-}

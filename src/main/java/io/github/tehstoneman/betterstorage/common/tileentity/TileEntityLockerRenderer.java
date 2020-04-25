@@ -10,22 +10,15 @@ import io.github.tehstoneman.betterstorage.client.renderer.tileentity.model.Mode
 import io.github.tehstoneman.betterstorage.common.block.BetterStorageBlocks;
 import io.github.tehstoneman.betterstorage.common.block.BlockConnectableContainer;
 import io.github.tehstoneman.betterstorage.common.block.BlockLocker;
-import io.github.tehstoneman.betterstorage.common.tileentity.TileEntityLocker;
-//import io.github.tehstoneman.betterstorage.common.tileentity.TileEntityReinforcedLocker;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.DoorBlock;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.ItemRenderer;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Vector3f;
-import net.minecraft.client.renderer.model.ItemCameraTransforms;
 import net.minecraft.client.renderer.model.Material;
-import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.client.renderer.tileentity.TileEntityRenderer;
 import net.minecraft.client.renderer.tileentity.TileEntityRendererDispatcher;
 import net.minecraft.inventory.container.PlayerContainer;
-import net.minecraft.item.ItemStack;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.state.properties.DoorHingeSide;
 import net.minecraft.tileentity.IChestLid;
@@ -71,8 +64,6 @@ public class TileEntityLockerRenderer extends TileEntityRenderer< TileEntityLock
 
 			rotateDoor( tileEntity, partialTicks, modelLocker, hingeSide );
 			modelLocker.render( matrixStack, vertexBuilder, combinedLight, combinedOverlay, 1.0F, 1.0F, 1.0F, 1.0F, hingeSide == DoorHingeSide.LEFT );
-//			if( tileEntity instanceof TileEntityReinforcedLocker )
-//				renderItem( (TileEntityReinforcedLocker)tileEntity, partialTicks, matrixStack, buffer, combinedLight, blockState );
 
 			matrixStack.pop();
 		}
@@ -86,9 +77,6 @@ public class TileEntityLockerRenderer extends TileEntityRenderer< TileEntityLock
 	protected Material getMaterial( TileEntityLocker tileEntity, boolean flag )
 	{
 		final ResourceLocation resourcelocation;
-//		if( tileEntity instanceof TileEntityReinforcedLocker )
-//			resourcelocation = flag ? Resources.TEXTURE_LOCKER_REINFORCED_DOUBLE : Resources.TEXTURE_LOCKER_REINFORCED;
-//		else
 			resourcelocation = flag ? Resources.TEXTURE_LOCKER_NORMAL_DOUBLE : Resources.TEXTURE_LOCKER_NORMAL;
 		return new Material( PlayerContainer.LOCATION_BLOCKS_TEXTURE, resourcelocation );
 	}
@@ -99,44 +87,5 @@ public class TileEntityLockerRenderer extends TileEntityRenderer< TileEntityLock
 		angle = 1.0F - angle;
 		angle = 1.0F - angle * angle * angle;
 		modelLocker.rotateDoor( angle, hingeSide == DoorHingeSide.LEFT );
-	}
-
-	/**
-	 * Renders attached lock on chest. Adapted from vanilla item frame
-	 *
-	 * @param locker
-	 * @param partialTicks
-	 * @param matrixStack
-	 * @param buffer
-	 * @param packedLight
-	 * @param state
-	 */
-//	private void renderItem( TileEntityReinforcedLocker locker, float partialTicks, MatrixStack matrixStack, IRenderTypeBuffer buffer,
-//			int packedLight, BlockState state )
-	{
-//		final ItemStack itemstack = locker.getLock();
-
-//		if( !itemstack.isEmpty() )
-//		{
-//			if( itemRenderer == null )
-//				itemRenderer = Minecraft.getInstance().getItemRenderer();
-//
-//			float openAngle = ( (IChestLid)locker ).getLidAngle( partialTicks );
-//			openAngle = 1.0F - openAngle;
-//			openAngle = 1.0F - openAngle * openAngle * openAngle;
-//
-//			final boolean left = state.get( DoorBlock.HINGE ) == DoorHingeSide.LEFT;
-//
-//			matrixStack.translate( 0.0, 0.0, 0.8125 );
-//
-//			matrixStack.translate( left ? 0.0 : 1.0, 0.0, 0.0 );
-//			matrixStack.rotate( Vector3f.YP.rotationDegrees( left ? -openAngle * 90 : openAngle * 90 ) );
-//			matrixStack.translate( left ? -0.0 : -1.0, 0.0, 0.0 );
-//
-//			matrixStack.translate( left ? 0.8125 : 0.1875, locker.isConnected() ? 0.875 : 0.375, 0.125 );
-//			matrixStack.scale( 0.5F, 0.5F, 0.5F );
-//			itemRenderer.renderItem( itemstack, ItemCameraTransforms.TransformType.FIXED, packedLight, OverlayTexture.DEFAULT_LIGHT, matrixStack,
-//					buffer );
-//		}
 	}
 }

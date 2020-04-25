@@ -4,15 +4,9 @@ import io.github.tehstoneman.betterstorage.ModInfo;
 import io.github.tehstoneman.betterstorage.client.gui.GuiLocker;
 import io.github.tehstoneman.betterstorage.client.renderer.Resources;
 import io.github.tehstoneman.betterstorage.client.renderer.tileentity.TileEntityLockerRenderer;
-import io.github.tehstoneman.betterstorage.common.block.BetterStorageBlocks;
 import io.github.tehstoneman.betterstorage.common.inventory.BetterStorageContainerTypes;
-import io.github.tehstoneman.betterstorage.common.item.BetterStorageItems;
 import io.github.tehstoneman.betterstorage.common.tileentity.BetterStorageTileEntityTypes;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScreenManager;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.RenderTypeLookup;
-import net.minecraft.client.renderer.texture.AtlasTexture;
 import net.minecraft.inventory.container.PlayerContainer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.TextureStitchEvent;
@@ -42,8 +36,5 @@ public class ClientSetup
 
 		event.addSprite( Resources.TEXTURE_LOCKER_NORMAL );
 		event.addSprite( Resources.TEXTURE_LOCKER_NORMAL_DOUBLE );
-		event.addSprite( Resources.TEXTURE_LOCKER_REINFORCED );
-		event.addSprite( Resources.TEXTURE_LOCKER_REINFORCED_DOUBLE );
-		event.addSprite( Resources.TEXTURE_WHITE );
 	}
 }

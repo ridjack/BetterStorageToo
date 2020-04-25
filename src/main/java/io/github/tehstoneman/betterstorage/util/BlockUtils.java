@@ -1,8 +1,12 @@
+/**
+ * I have a feeling this is for the weird randomized-display crate BST had,
+ * but at this point I'm not comfortable screwing with it.
+ */
+
 package io.github.tehstoneman.betterstorage.util;
 
 import java.util.List;
 import java.util.stream.Collectors;
-
 import io.github.tehstoneman.betterstorage.common.inventory.Region;
 import net.minecraft.util.math.BlockPos;
 

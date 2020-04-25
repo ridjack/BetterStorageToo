@@ -12,7 +12,6 @@ public class BetterStorageItemGroup extends ItemGroup
 	public BetterStorageItemGroup()
 	{
 		super( "better_storage_too" );
-//		setRelevantEnchantmentTypes( EnchantmentKey.KEY, EnchantmentLock.LOCK );
 	}
 
 	@Override

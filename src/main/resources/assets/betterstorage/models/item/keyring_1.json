@@ -1,7 +1,0 @@
-{
-	"parent": "betterstorage:item/keyring",
-	"textures":
-	{
-		"layer0": "betterstorage:item/keyring_1"
-	}
-}
